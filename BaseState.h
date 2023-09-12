@@ -29,8 +29,8 @@ public:
 	}
 	virtual void HandleUP(Context* context) = 0;
 	virtual void HandleDOWN(Context* context) = 0;
-	virtual void MenuUP() = 0;
-	virtual void MenuDOWN() = 0;
+	virtual void HandleENTER(Context* context) = 0;
+	
 };
 
 

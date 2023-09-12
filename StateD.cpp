@@ -1,9 +1,10 @@
+#include <iostream>
+
 #include "StateA.h"
 #include"StateB.h"
 #include"StateC.h"
 #include"StateD.h"
 #include "Context.h"
-#include <iostream>
 
 StateD::StateD()
 {
@@ -23,7 +24,11 @@ void StateD::HandleDOWN(Context* context) {
 void StateD::HandleUP(Context* context) {
 	MenuUP();
 	context->SetState(new StateC());
+}
 
+void StateD::HandleENTER(Context* context) {
+	Col(0, 15);
+	exit(0);
 }
 
 void StateD::MenuUP()

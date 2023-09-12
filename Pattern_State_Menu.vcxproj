@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="BaseState.h" />
     <ClInclude Include="Context.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="StateA.h" />
     <ClInclude Include="StateB.h" />
     <ClInclude Include="StateC.h" />

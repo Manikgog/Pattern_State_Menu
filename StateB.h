@@ -12,7 +12,8 @@ public:
 	// изменяем состояние на другое
 	void HandleDOWN(Context* context)override;
 	void HandleUP(Context* context)override;
-	void MenuUP()override;
-	void MenuDOWN()override;
+	void HandleENTER(Context* context)override;
+	void MenuUP();
+	void MenuDOWN();
 };
 

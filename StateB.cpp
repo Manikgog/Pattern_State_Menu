@@ -27,6 +27,11 @@ void StateB::HandleUP(Context* context) {
 
 }
 
+void StateB::HandleENTER(Context* context) {
+	//MenuENTER();
+	context->SetState(new StateB());
+}
+
 void StateB::MenuUP()
 {
 	Col(0, 15);

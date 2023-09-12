@@ -5,13 +5,18 @@
 #include<iostream>
 
 #include "BaseState.h"
+#include "Menu.h"
 
 // класс контекста
 // его внутреннее состояние будет меняться
 class Context
 {
-	// переменная для внутреннего состояния
+private:
+
 	BaseState* pCurrent = nullptr;
+
+	// указатель на объект меню
+	Menu* mainMenu = nullptr;
 
 	char input_menu(int low, int hi, size_t& numAcion) {
 		int c1 = 0;
@@ -46,43 +51,23 @@ class Context
 		return (char)c;
 	}
 
-	void Col(int bg, int txt)
-	{
-		HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleTextAttribute(hConsole, (WORD)((bg << 4) | txt));
-	}
-
-	void setcur(int x, int y)
-	{
-		HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-		COORD coord;
-		coord.X = x;
-		coord.Y = y;
-		SetConsoleCursorPosition(hConsole, coord);
-	}
-
-
-	void Menu()
-	{
-		Col(0, 15);
-		setcur(2, 2); std::cout << "Добавление нового дела";
-		setcur(2, 3); std::cout << "Изменение дела";
-		setcur(2, 4); std::cout << "Сортировка дел";
-		setcur(2, 5); std::cout << "Выход";
-	}
+	
 
 public:
 
 	Context(BaseState* pTemp)
 	{
 		pCurrent = pTemp;
-		Menu();
+		mainMenu = new MainMenu();
+		mainMenu->Menu_();
 	}
 
 	~Context()
 	{
 		if (pCurrent)
 			delete pCurrent;
+		if (mainMenu)
+			delete mainMenu;
 	}
 
 
@@ -110,8 +95,13 @@ public:
 			if (n == 48)
 				pCurrent->HandleDOWN(this);
 			if (n == 13)
-				break;
+			{
+				pCurrent->HandleENTER(this);
+				Menu* addCaseMenu = new AddCaseMenu();
+				addCaseMenu->Menu_();
+			}
 		}
+
 
 	}
 };

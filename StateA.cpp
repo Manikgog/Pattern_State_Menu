@@ -27,6 +27,11 @@ void StateA::HandleUP(Context* context) {
 
 }
 
+void StateA::HandleENTER(Context* context) {
+	MenuENTER();
+	context->SetState(new StateA());
+}
+
 void StateA::MenuUP() 
 {
 	Col(0, 15);
@@ -43,3 +48,12 @@ void StateA::MenuDOWN()
 	setcur(2, 3); std::cout << "Изменение дела";
 }
 
+void StateA::MenuENTER()
+{
+	system("cls");
+	int n;
+	setcur(2, 2); std::cout << "Введите название дела: ";
+	std::cin >> n;
+	system("cls");
+
+}
