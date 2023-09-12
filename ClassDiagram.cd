@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StateA">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAYAAAAAAAABAAABAEAAAABAAAAAA=</HashCode>
+      <FileName>StateA.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateB">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAARAAAAAAAABAAABAEAAAABAAAAAA=</HashCode>
+      <FileName>StateB.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseState">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAABAQAAAAQAAABEAABAEAAAAAAAAAAA=</HashCode>
+      <FileName>BaseState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Context">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABEACIgAAAABAAAAAAAAAAAEIgAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Context.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateC">
+    <Position X="5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAASAAAAAAAABAAABAEAAAABAAAAAA=</HashCode>
+      <FileName>StateC.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateD">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAEAAAAAABAAABAEAAAABAAAAAA=</HashCode>
+      <FileName>StateD.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
